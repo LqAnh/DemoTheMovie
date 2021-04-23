@@ -19,8 +19,8 @@ Package api:
 
 		AccReqModel: tài khoản, mật khẩu
 		
-		TokenResModel: lấy token success hay không
-		
+		TokenResModel: lấy token 
+
 		MovieModel: lấy danh sách phim
 
 		DetailMovieModel: lấy chi tiết phim dựa vào movieId được click ở recycleview
@@ -37,14 +37,16 @@ Package view:
 	
 	package fragment:
 		baseFragment: các phương thức dùng chung
-		m001: quản lý giao diện màn hình login.          
+		m000: giao diện splash chào mừng
+		m001: quản lý giao diện màn hình login          
 		m002: recycle view đổ dữ liệu thành list từ server trả về
 		m003: detail movie gồm: ngày chiếu, độ dài phim, poster, overview từ server trả về 
 		m004: mở ra youtube xem trailer		
 	
 	package viewmodel: xử lý dữ liệu 
 		baseViewModel: phương thức dùng chung
-		m001:  kiểm tra tài khoản mật khẩu, thực hiện login, lưu vào sharePreference để lần 											sau không cần nhập lại
+		m000: kiểm tra có token chưa để không cần đăng nhập lại
+		m001:  kiểm tra tài khoản mật khẩu, thực hiện login, lưu token vào sharePreference để lần sau không cần nhập lại
 		m002: call api để lấy đanh sách movie
 		m003: call api đề lấy detail movie
 		m004: call api để lấy key video trên youtube
