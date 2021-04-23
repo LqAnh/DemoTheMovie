@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="vertical">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/light_grey_3">
+
+
+        <TableRow
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"/>
+            <TextView
+                android:id="@+id/tv_booking_ticket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Booking"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+
+
+
+
+        </TableRow>
+
+
+
+
+        <View
+            android:layout_width="0.1dp"
+            android:layout_height="40dp"
+            android:background="@color/grayDark"
+            android:layout_gravity="center"/>
+
+
+
+        <TableRow
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_play"
+                android:gravity="center_vertical"/>
+            <TextView
+                android:id="@+id/tv_play_trailer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Play Trailer"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+
+
+        </TableRow>
+
+
+
+
+    </TableRow>
+
+</LinearLayout>
