@@ -7,8 +7,7 @@ PASSWORD: Lqa1234
 CAUTION:
 1), THIẾT BỊ CẦN PHẢI KẾT NỐI INTERNET
  	
-2), PHẦN LẤY TRAILER VẪN CHƯA HOÀN THIỆN NÊN EM ĐANG ĐỂ 1 LINK YOUTUBE SẴN VÀO YOUTUBEDIALOG, NÊN KHI CLICK VÀO PHIM NÀO CŨNG CHỈ RA 1 TRAILER
-
+2), CHỨC NĂNG BOOK VÉ VẪN ĐANG HOÀN THIỆN
 
 KIẾN TRÚC CHƯƠNG TRÌNH SỬ DỤNG MÔ HÌNH MVVM CỤ THỂ NHƯ SAU:
 
@@ -34,24 +33,21 @@ Package view:
 	
 	package act: 
 		baseact: các phương thức dùng chung
-		mainAct: quản lý callack chuyển màn cho các fragment
-		youtubeDialog: activity dùng để show video trailer cho phim	
+		mainAct: quản lý callback chuyển màn cho các fragment
 	
 	package fragment:
 		baseFragment: các phương thức dùng chung
 		m001: quản lý giao diện màn hình login.          
 		m002: recycle view đổ dữ liệu thành list từ server trả về
-		m003: detail movie gồm: ngày chiếu, độ dài phim, poster, overview từ server trả về 		
+		m003: detail movie gồm: ngày chiếu, độ dài phim, poster, overview từ server trả về 
+		m004: mở ra youtube xem trailer		
 	
 	package viewmodel: xử lý dữ liệu 
-	
 		baseViewModel: phương thức dùng chung
-	
 		m001:  kiểm tra tài khoản mật khẩu, thực hiện login, lưu vào sharePreference để lần 											sau không cần nhập lại
-		
 		m002: call api để lấy đanh sách movie
-	
 		m003: call api đề lấy detail movie
+		m004: call api để lấy key video trên youtube
 
 App: application context  
 
