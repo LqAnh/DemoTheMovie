@@ -1,5 +1,6 @@
 package com.example.themovie.view.fragment;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.view.View;
 import android.widget.ImageView;
@@ -10,14 +11,16 @@ import com.example.themovie.App;
 import com.example.themovie.R;
 import com.example.themovie.api.model.DetailMovieModel;
 import com.example.themovie.api.model.MovieModel;
+import com.example.themovie.view.act.CinemaAct;
 import com.example.themovie.view.viewmodel.M003DetailModel;
 
 
 public class M003DetailFilmFrg extends BaseFragment<M003DetailModel> {
     private static final String TAG = M003DetailFilmFrg.class.getName();
     public static final String KEY_SHOW_TRAILER = "KEY_SHOW_TRAILER";
+    public static final String KEY_SHOW_REVIEW = "KEY_SHOW_REVIEW";
     private MovieModel.Result film;
-    private TextView tvTitle, tvTime, tvUserRate, tvDate, tvOverview, tvLanguage, tvTagLine;
+    private TextView tvTitle, tvTime, tvUserRate, tvDate, tvOverview, tvLanguage, tvTagLine, tvPCP, tvPCT, tvCMT, tvCMT1;
     private ImageView posHori, posVer;
 
 
@@ -50,6 +53,16 @@ public class M003DetailFilmFrg extends BaseFragment<M003DetailModel> {
         tvGenres = findViewById(R.id.tv_gene);
         tvTagLine = findViewById(R.id.tv_tagline);
 
+        tvPCP = findViewById(R.id.tv_product_cp);
+        tvPCT = findViewById(R.id.tv_product_ct);
+
+
+        tvCMT = findViewById(R.id.tv_cmt);
+        tvCMT.setOnClickListener(this);
+        tvCMT1 = findViewById(R.id.tv_cmt1);
+        tvCMT1.setOnClickListener(this);
+
+
         tvBooking = findViewById(R.id.tv_booking_ticket);
         tvBooking.setOnClickListener(this);
 
@@ -63,7 +76,21 @@ public class M003DetailFilmFrg extends BaseFragment<M003DetailModel> {
     protected void clickView(View v, int id) {
         if (v.getId() == R.id.tv_play_trailer) {
             goToM004();
+        } else if (v.getId() == R.id.tv_cmt || v.getId() == R.id.tv_cmt1) {
+            goToM005();
+
+        }else if (v.getId() == R.id.tv_booking_ticket){
+            goToM006();
         }
+    }
+    private void goToM006() {
+        Intent intent = new Intent(App.getInstance(), CinemaAct.class);
+        startActivity(intent);
+
+    }
+
+    private void goToM005() {
+        callBack.onCallBack(KEY_SHOW_REVIEW, film);
     }
 
     private void goToM004() {
@@ -132,6 +159,21 @@ public class M003DetailFilmFrg extends BaseFragment<M003DetailModel> {
                 x++;
                 tvGenres.setText(dataTmp.getName());
             }
+
+
+            for (int i = 0; i < detailMovieModel.getListProductionCP().size(); i++){
+                DetailMovieModel.ProductionCP dataTmp = detailMovieModel.getListProductionCP().get(i);
+                tvPCP.setText(dataTmp.getName());
+            }
+
+
+
+            for (int i = 0; i < detailMovieModel.getListProductionCT().size(); i++) {
+                DetailMovieModel.ProductionCT dataTmp = detailMovieModel.getListProductionCT().get(i);
+                tvPCT.setText(dataTmp.getName());
+            }
+
+
 
 
 

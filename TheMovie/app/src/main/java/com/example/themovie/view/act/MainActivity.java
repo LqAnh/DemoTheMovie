@@ -9,6 +9,7 @@ import com.example.themovie.view.fragment.M001LoginFrg;
 import com.example.themovie.view.fragment.M002MovieListFrg;
 import com.example.themovie.view.fragment.M003DetailFilmFrg;
 import com.example.themovie.view.fragment.M004Frg;
+import com.example.themovie.view.fragment.M005ReviewFrg;
 import com.example.themovie.view.viewmodel.MainViewModel;
 
 public class MainActivity extends BaseAct<MainViewModel> implements OnActionCallBack {
@@ -63,6 +64,14 @@ public class MainActivity extends BaseAct<MainViewModel> implements OnActionCall
                 m004Frg.setFilm(film1);
                 m004Frg.setCallBack(this);
                 showFragment(R.id.ln_main, m004Frg, true);
+                break;
+
+            case M003DetailFilmFrg.KEY_SHOW_REVIEW:
+                M005ReviewFrg m005ReviewFrg = new M005ReviewFrg();
+                MovieModel.Result film2 = (MovieModel.Result) data;
+                m005ReviewFrg.setFilm(film2);
+                m005ReviewFrg.setCallBack(this);
+                showFragment(R.id.ln_main, m005ReviewFrg, true);
                 break;
         }
 

@@ -3,6 +3,7 @@ package com.example.themovie.api;
 import com.example.themovie.api.model.AccReqModel;
 import com.example.themovie.api.model.DetailMovieModel;
 import com.example.themovie.api.model.MovieModel;
+import com.example.themovie.api.model.ReviewFilmModel;
 import com.example.themovie.api.model.TokenResModel;
 import com.example.themovie.api.model.TrailerFilmModel;
 
@@ -38,6 +39,11 @@ public interface API {
     @GET("movie/{movieId}/videos?api_key=" + API_KEY + "&language=en-US")
     @Headers({"Content-Type: application/json;charset=utf-8"})
     Call<TrailerFilmModel> getLinkTrailer(@Path("movieId") String movieId);
+
+    @GET("movie/{movieId}/reviews?api_key=" + API_KEY + "&language=en-US")
+    @Headers({"Content-Type: application/json;charset=utf-8"})
+    Call<ReviewFilmModel> getReviewFilm(@Path("movieId") String movieId);
+
 
 
 

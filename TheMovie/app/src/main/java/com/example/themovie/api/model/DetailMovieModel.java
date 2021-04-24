@@ -34,6 +34,28 @@ public class DetailMovieModel implements Serializable {
         @SerializedName("name")
         private String name;
     }
+    @SerializedName("production_companies")
+    private List<ProductionCP> listProductionCP;
+    @Getter
+    @Setter
+    public static class ProductionCP implements Serializable {
+
+        @SerializedName("name")
+        private String name;
+    }
+
+
+
+
+    @SerializedName("production_countries")
+    private List<ProductionCT> listProductionCT;
+    @Getter
+    @Setter
+    public static class ProductionCT implements Serializable {
+
+        @SerializedName("name")
+        private String name;
+    }
 
 
     @SerializedName("original_language")
