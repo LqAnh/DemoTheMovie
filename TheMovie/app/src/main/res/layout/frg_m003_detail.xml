@@ -15,12 +15,12 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="220dp">
+                android:layout_height="@dimen/d_220">
 
                 <ImageView
                     android:id="@+id/iv_pos_hori"
@@ -31,10 +31,10 @@
 
                 <ImageView
                     android:id="@+id/iv_pos_ver"
-                    android:layout_width="106dp"
-                    android:layout_height="140dp"
+                    android:layout_width="@dimen/d_106"
+                    android:layout_height="@dimen/d_140"
                     android:layout_gravity="start|center_vertical"
-                    android:layout_marginStart="25dp"
+                    android:layout_marginStart="@dimen/d_25"
                     android:scaleType="fitXY"
                     android:src="@drawable/ic_pos" />
 
@@ -46,7 +46,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/d_10"
                 android:fontFamily="sans-serif-light"
                 android:gravity="center"
                 android:text="Godzilla vs Kong "
@@ -74,8 +74,8 @@
 
                 <TextView
                     android:id="@+id/tv_user_rate"
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
+                    android:layout_width="@dimen/d_45"
+                    android:layout_height="@dimen/d_45"
                     android:gravity="center"
                     android:text="8.6"
                     android:textColor="@color/yellow"
@@ -83,7 +83,7 @@
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="45dp"
+                    android:layout_height="@dimen/d_45"
                     android:layout_marginStart="@dimen/d_8"
                     android:layout_marginEnd="@dimen/d_32"
                     android:fontFamily="sans-serif-light"
@@ -99,15 +99,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
                 android:layout_gravity="center"
-                android:layout_marginStart="15dp"
-                android:layout_marginEnd="15dp"
+                android:layout_marginStart="@dimen/d_15"
+                android:layout_marginEnd="@dimen/d_15"
                 android:background="@color/grayDark" />
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="15dp">
+                android:layout_marginStart="@dimen/d_15"
+                android:layout_marginTop="@dimen/d_15">
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -128,7 +128,7 @@
                         android:id="@+id/tv_date"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="@dimen/d_5"
                         android:text="03/26/2021"
                         android:textColor="@color/light_grey"
                         android:textSize="16sp" />
@@ -167,8 +167,8 @@
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="15dp">
+                android:layout_marginStart="@dimen/d_15"
+                android:layout_marginTop="@dimen/d_15">
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -218,7 +218,7 @@
                         android:id="@+id/tv_language"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="@dimen/d_5"
                         android:text="Korea"
                         android:textColor="@color/light_grey"
                         android:textSize="16sp" />
@@ -233,17 +233,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
                 android:layout_gravity="center"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="15dp"
+                android:layout_marginStart="@dimen/d_15"
+                android:layout_marginTop="@dimen/d_15"
+                android:layout_marginEnd="@dimen/d_15"
                 android:background="@color/grayDark" />
 
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="15dp"
+                android:layout_height="@dimen/d_20"
+                android:layout_marginStart="@dimen/d_15"
+                android:layout_marginTop="@dimen/d_15"
                 android:fontFamily="sans-serif-light"
                 android:text="Description"
                 android:textColor="@color/white"
@@ -254,9 +254,9 @@
                 android:id="@+id/tv_detail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginStart="@dimen/d_15"
+                android:layout_marginEnd="@dimen/d_15"
+                android:layout_marginTop="@dimen/d_5"
                 android:text="Determined to ensure Superman's hgyuimate sacrifice was not in vain, Bruce Wayne aligns forces with Diana Prince with plans to recruit a team of metahumans to protect the world from an approaching threat of catastrophic proportions."
                 android:textColor="@color/light_grey"
                 android:textSize="16sp" />
@@ -264,18 +264,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
                 android:layout_gravity="center"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="15dp"
+                android:layout_marginStart="@dimen/d_15"
+                android:layout_marginTop="@dimen/d_15"
+                android:layout_marginEnd="@dimen/d_15"
                 android:background="@color/grayDark" />
 
             <TableRow
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="15dp">
+                android:layout_marginStart="@dimen/d_15"
+                android:layout_marginTop="@dimen/d_15"
+                android:layout_marginEnd="@dimen/d_15">
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -296,8 +296,8 @@
                         android:id="@+id/tv_product_cp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="15dp"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="@dimen/d_15"
+                        android:layout_marginTop="@dimen/d_5"
                         android:text="Warner Bros. Pictures"
                         android:textColor="@color/light_grey"
                         android:textSize="16sp" />
@@ -312,9 +312,9 @@
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="15dp">
+                android:layout_marginStart="@dimen/d_15"
+                android:layout_marginTop="@dimen/d_15"
+                android:layout_marginEnd="@dimen/d_15">
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -327,7 +327,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-light"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="@dimen/d_10"
                         android:text="Production Country"
                         android:textColor="@color/white"
                         android:textSize="17sp"
@@ -337,7 +337,7 @@
                         android:id="@+id/tv_product_ct"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="@dimen/d_5"
                         android:text="United States of America"
                         android:textColor="@color/light_grey"
                         android:textSize="16sp" />
@@ -348,9 +348,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
                 android:layout_gravity="center"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="15dp"
+                android:layout_marginStart="@dimen/d_15"
+                android:layout_marginTop="@dimen/d_15"
+                android:layout_marginEnd="@dimen/d_15"
                 android:background="@color/grayDark" />
 
 
@@ -359,10 +359,10 @@
                 android:id="@+id/tv_cmt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginStart="@dimen/d_15"
+                android:layout_marginTop="@dimen/d_10"
                 android:fontFamily="sans-serif-light"
-                android:text="Comments"
+                android:text="Reviews"
                 android:textColor="@color/white"
                 android:textSize="17sp"
                 android:textStyle="bold" />
@@ -372,9 +372,9 @@
                 android:id="@+id/tv_cmt1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginEnd="15dp"
-                android:text="Click to see users reviews"
+                android:layout_marginStart="@dimen/d_15"
+                android:layout_marginEnd="@dimen/d_15"
+                android:text="(Click to see reviews)"
                 android:textColor="@color/light_grey"
                 android:textSize="16sp" />
 

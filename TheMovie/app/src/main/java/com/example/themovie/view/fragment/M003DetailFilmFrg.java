@@ -21,7 +21,7 @@ public class M003DetailFilmFrg extends BaseFragment<M003DetailModel> {
     public static final String KEY_SHOW_REVIEW = "KEY_SHOW_REVIEW";
     private MovieModel.Result film;
     private TextView tvTitle, tvTime, tvUserRate, tvDate, tvOverview, tvLanguage, tvTagLine, tvPCP, tvPCT, tvCMT, tvCMT1;
-    private ImageView posHori, posVer;
+    private ImageView posHori, posVer, ivTicket, ivPlay;
 
 
     private TextView tvGenres;
@@ -67,6 +67,18 @@ public class M003DetailFilmFrg extends BaseFragment<M003DetailModel> {
         tvBooking.setOnClickListener(this);
 
 
+        ivTicket = findViewById(R.id.iv_ticket);
+        ivTicket.setOnClickListener(this);
+
+
+
+        ivPlay = findViewById(R.id.iv_play);
+        ivPlay.setOnClickListener(this);
+
+
+
+
+
         mModel.getDetailMovie(film.getId());
 
 
@@ -74,12 +86,12 @@ public class M003DetailFilmFrg extends BaseFragment<M003DetailModel> {
 
     @Override
     protected void clickView(View v, int id) {
-        if (v.getId() == R.id.tv_play_trailer) {
+        if (v.getId() == R.id.tv_play_trailer || v.getId() == R.id.iv_play) {
             goToM004();
         } else if (v.getId() == R.id.tv_cmt || v.getId() == R.id.tv_cmt1) {
             goToM005();
 
-        }else if (v.getId() == R.id.tv_booking_ticket){
+        }else if (v.getId() == R.id.tv_booking_ticket || v.getId() == R.id.iv_ticket){
             goToM006();
         }
     }

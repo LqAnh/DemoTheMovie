@@ -16,7 +16,6 @@ import com.example.themovie.view.viewmodel.M005FilmReviewModel;
 public class M005ReviewFrg extends BaseFragment<M005FilmReviewModel> {
     public static final String TAG = M005ReviewFrg.class.getName();
     private MovieModel.Result film;
-    private TextView tvAuthor, tvContentRv;
     private RecyclerView rvReview;
 
     @Override

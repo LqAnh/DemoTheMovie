@@ -1,6 +1,7 @@
 package com.example.themovie.adapter;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -43,6 +44,17 @@ public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.ReviewHold
         holder.tvAuthor.setText(data.getAuthorName());
         holder.tvContent.setText(data.getContentReview());
         holder.tvRating.setText(data.getListAuthorDetail().getRating());
+        holder.tvRating.setTextColor(Color.parseColor("#FDD835"));
+
+
+//        double score = Double.parseDouble(data.getListAuthorDetail().getRating());
+//        if (score >= 8) {
+//            holder.tvRating.setTextColor(Color.parseColor("#4FAC53"));
+//        } else if (score < 8){
+//            holder.tvRating.setTextColor(Color.parseColor("#FDD835"));
+//
+//        }
+
 
         Glide.with(context)
                 .load("https://www.themoviedb.org/t/p/w600_and_h900_bestv2" + data.getListAuthorDetail().getAvaAuthor())
