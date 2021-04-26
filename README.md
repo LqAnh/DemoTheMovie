@@ -12,7 +12,9 @@ CAUTION:
 KIẾN TRÚC CHƯƠNG TRÌNH SỬ DỤNG MÔ HÌNH MVVM CỤ THỂ NHƯ SAU:
 
 Package adapter: 
-	class FilmAdapter: đổ dữ liệu cho recycleview
+		FilmAdapter: đổ dữ liệu cho recycleview ở Fragment 002
+		
+		ReviewFilmAdapter: đổ dữ liệu cho recycleview ở Fragment 005
 
 Package api: 
 	package model: các class chuyển dữ liệu từ file json thành đối tượng
@@ -26,6 +28,8 @@ Package api:
 		DetailMovieModel: lấy chi tiết phim dựa vào movieId được click ở recycleview
 
 		TrailerFilmModel: lấy trailer phim dựa vào movieId	
+		
+		ReviewFilmModel: lấy review phim dựa vào movieId
 
   	interface api: khai báo các phương thức để call api
 
@@ -33,7 +37,8 @@ Package view:
 	
 	package act: 
 		baseact: các phương thức dùng chung
-		mainAct: quản lý callback chuyển màn cho các fragment
+		MainAct: quản lý callback chuyển màn cho các fragment
+		CinemaAct: quản lý việc mở các app để book vé 
 	
 	package fragment:
 		baseFragment: các phương thức dùng chung
@@ -41,7 +46,8 @@ Package view:
 		m001: quản lý giao diện màn hình login          
 		m002: recycle view đổ dữ liệu thành list từ server trả về
 		m003: detail movie gồm: ngày chiếu, độ dài phim, poster, overview từ server trả về 
-		m004: mở ra youtube xem trailer		
+		m004: mở ra youtube xem trailer
+		m005: review của người xem		
 	
 	package viewmodel: xử lý dữ liệu 
 		baseViewModel: phương thức dùng chung
@@ -50,9 +56,10 @@ Package view:
 		m002: call api để lấy đanh sách movie
 		m003: call api đề lấy detail movie
 		m004: call api để lấy key video trên youtube
+		m005: call api lấy review của người dùng
 
 App: application context  
 
-CommonUtils: singleton chứ các phương thức cho sharePreference
+CommonUtils: singleton chứa các phương thức cho sharePreference để ghi nhớ đăng nhập
 
 OnActionCallBack: callBack sử dụng cơ chế(key value)
