@@ -1,8 +1,11 @@
 package com.example.themovie.view.fragment;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.example.themovie.R;
 import com.example.themovie.api.model.TokenResModel;
@@ -15,6 +18,7 @@ public class M001LoginFrg extends BaseFragment<M001LoginModel> {
     private static final String TAG = M001LoginFrg.class.getName();
     private EditText edtUserName, edtPass;
     private CheckBox cbRemem;
+    private TextView tvSignUp;
 
     @Override
     protected void initViews() {
@@ -22,7 +26,8 @@ public class M001LoginFrg extends BaseFragment<M001LoginModel> {
         edtUserName = findViewById(R.id.edt_user_name);
         edtPass = findViewById(R.id.edt_pass);
         cbRemem = findViewById(R.id.cb_remember);
-
+        tvSignUp = findViewById(R.id.tv_sign_up);
+        tvSignUp.setOnClickListener(this);
     }
 
     @Override
@@ -31,7 +36,15 @@ public class M001LoginFrg extends BaseFragment<M001LoginModel> {
             doLogin(edtUserName.getText().toString(), edtPass.getText().toString(), 1);
         } else if (v.getId() == R.id.tv_login && !cbRemem.isChecked()) {
             doLogin(edtUserName.getText().toString(), edtPass.getText().toString(), 0);
+        } else if (v.getId() == R.id.tv_sign_up) {
+            doSignUp();
         }
+
+    }
+
+    private void doSignUp() {
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.themoviedb.org/signup"));
+        startActivity(browserIntent);
 
     }
 

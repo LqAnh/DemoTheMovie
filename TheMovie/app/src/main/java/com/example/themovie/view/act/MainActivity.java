@@ -10,6 +10,7 @@ import com.example.themovie.view.fragment.M002MovieListFrg;
 import com.example.themovie.view.fragment.M003DetailFilmFrg;
 import com.example.themovie.view.fragment.M004Frg;
 import com.example.themovie.view.fragment.M005ReviewFrg;
+import com.example.themovie.view.fragment.M007AccountFrg;
 import com.example.themovie.view.viewmodel.MainViewModel;
 
 public class MainActivity extends BaseAct<MainViewModel> implements OnActionCallBack {
@@ -58,6 +59,11 @@ public class MainActivity extends BaseAct<MainViewModel> implements OnActionCall
                 showFragment(R.id.ln_main, m003DetailFilmFrg, true);
                 break;
 
+            case M002MovieListFrg.KEY_SHOW_ACCOUNT:
+                M007AccountFrg m007AccountFrg = new M007AccountFrg();
+                m007AccountFrg.setCallBack(this);
+                showFragment(R.id.ln_main, m007AccountFrg, true);
+                break;
             case M003DetailFilmFrg.KEY_SHOW_TRAILER:
                 M004Frg m004Frg = new M004Frg();
                 MovieModel.Result film1 = (MovieModel.Result) data;

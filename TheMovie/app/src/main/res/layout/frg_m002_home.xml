@@ -1,18 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/light_grey_2">
 
-    <include layout="@layout/actionbar_home"/>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_50"
+        android:layout_marginStart="@dimen/d_20"
+        android:layout_marginTop="@dimen/d_15"
+        android:layout_marginEnd="@dimen/d_20">
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_radius_left"
+            android:ellipsize="end"
+            android:ems="10"
+            android:fontFamily="sans-serif-light"
+            android:hint="Nhập tên phim"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="17sp"
+            android:layout_gravity="center"
+            android:padding="@dimen/d_15"/>
+        <View
+            android:layout_width="0.1dp"
+            android:layout_height="10dp"/>
+        <ImageView
+            android:layout_width="@dimen/d_40"
+            android:layout_weight="0.1"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_search"
+            android:background="@drawable/bg_radius_right"
+            app:tint="@color/white"
+            android:layout_gravity="center"
+            android:padding="@dimen/d_10"/>
+
+
+    </TableRow>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_movie"
         android:background="@color/light_grey_2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         tools:listitem="@layout/movie_detail"
         android:padding="@dimen/d_20"/>
+    <include layout="@layout/actionbar_home"/>
 
 
 </LinearLayout>

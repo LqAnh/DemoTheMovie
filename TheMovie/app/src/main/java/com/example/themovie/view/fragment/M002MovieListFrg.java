@@ -20,9 +20,10 @@ public class M002MovieListFrg extends BaseFragment<M002ListFilmModel> implements
     private static final String TAG = M002MovieListFrg.class.getName();
     public static final String KEY_SHOW_DETAIL = "KEY_SHOW_DETAIL";
     public static final String KEY_LOGIN_AGAIN = "KEY_LOGIN_AGAIN";
+    public static final String KEY_SHOW_ACCOUNT = "KEY_SHOW_ACCOUNT";
 
     private RecyclerView rvFilm;
-    private ImageView ivLogOut;
+    private ImageView ivLogOut, ivAcc;
 
     @SuppressLint("CutPasteId")
     @Override
@@ -30,6 +31,8 @@ public class M002MovieListFrg extends BaseFragment<M002ListFilmModel> implements
         rvFilm = findViewById(R.id.rv_movie);
         ivLogOut = findViewById(R.id.iv_log_out);
         ivLogOut.setOnClickListener(this);
+        ivAcc = findViewById(R.id.iv_account);
+        ivAcc.setOnClickListener(this);
         rvFilm.setLayoutManager(new LinearLayoutManager(mContext));
         mModel.getListFilm();
 
@@ -48,7 +51,13 @@ public class M002MovieListFrg extends BaseFragment<M002ListFilmModel> implements
                     .setNegativeButton("CANCEL", (dialog, which) -> dialog.cancel())
                     .setMessage("Do you want log out now?")
                     .show();
+        }else if (v.getId() == R.id.iv_account){
+            goToM007();
         }
+    }
+
+    private void goToM007() {
+        callBack.onCallBack(KEY_SHOW_ACCOUNT, null);
     }
 
     @Override

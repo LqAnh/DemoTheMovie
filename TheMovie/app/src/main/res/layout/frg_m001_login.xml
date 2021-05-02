@@ -79,5 +79,15 @@
             android:textColorHint="@color/white"
             android:textSize="@dimen/d_20"
             android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tv_sign_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't have account? Sign up"
+            android:fontFamily="sans-serif-light"
+            android:layout_gravity="end"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:layout_marginTop="@dimen/d_10"/>
     </LinearLayout>
 </FrameLayout>

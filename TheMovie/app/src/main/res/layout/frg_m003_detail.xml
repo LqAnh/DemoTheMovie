@@ -241,7 +241,7 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/d_20"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/d_15"
                 android:layout_marginTop="@dimen/d_15"
                 android:fontFamily="sans-serif-light"
@@ -256,7 +256,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/d_15"
                 android:layout_marginEnd="@dimen/d_15"
-                android:layout_marginTop="@dimen/d_5"
+                android:layout_marginTop="@dimen/d_10"
                 android:text="Determined to ensure Superman's hgyuimate sacrifice was not in vain, Bruce Wayne aligns forces with Diana Prince with plans to recruit a team of metahumans to protect the world from an approaching threat of catastrophic proportions."
                 android:textColor="@color/light_grey"
                 android:textSize="16sp" />
