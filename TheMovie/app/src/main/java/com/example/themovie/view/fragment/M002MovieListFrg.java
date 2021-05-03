@@ -21,9 +21,10 @@ public class M002MovieListFrg extends BaseFragment<M002ListFilmModel> implements
     public static final String KEY_SHOW_DETAIL = "KEY_SHOW_DETAIL";
     public static final String KEY_LOGIN_AGAIN = "KEY_LOGIN_AGAIN";
     public static final String KEY_SHOW_ACCOUNT = "KEY_SHOW_ACCOUNT";
+    public static final String KEY_SHOW_HISTORY_BOOKING = "KEY_SHOW_HISTORY_BOOKING";
 
     private RecyclerView rvFilm;
-    private ImageView ivLogOut, ivAcc;
+    private ImageView ivLogOut, ivAcc, ivHis;
 
     @SuppressLint("CutPasteId")
     @Override
@@ -33,6 +34,8 @@ public class M002MovieListFrg extends BaseFragment<M002ListFilmModel> implements
         ivLogOut.setOnClickListener(this);
         ivAcc = findViewById(R.id.iv_account);
         ivAcc.setOnClickListener(this);
+        ivHis = findViewById(R.id.iv_history);
+        ivHis.setOnClickListener(this);
         rvFilm.setLayoutManager(new LinearLayoutManager(mContext));
         mModel.getListFilm();
 
@@ -53,7 +56,13 @@ public class M002MovieListFrg extends BaseFragment<M002ListFilmModel> implements
                     .show();
         }else if (v.getId() == R.id.iv_account){
             goToM007();
+        }else if (v.getId() == R.id.iv_history){
+            goToM008();
         }
+    }
+
+    private void goToM008() {
+        callBack.onCallBack(KEY_SHOW_HISTORY_BOOKING, null);
     }
 
     private void goToM007() {

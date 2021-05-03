@@ -81,6 +81,103 @@
 
     </LinearLayout>
 
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="@dimen/d_10"
+        android:paddingStart="@dimen/d_20">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="Payment"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+
+        <TableRow
+            android:layout_marginTop="@dimen/d_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/d_20"
+                android:src="@drawable/ic_bidv"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="BIDV"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="0dp"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="*7757"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginEnd="@dimen/d_40"/>
+
+
+
+
+        </TableRow>
+        <View
+            android:layout_marginTop="@dimen/d_10"
+            android:layout_width="match_parent"
+            android:layout_marginStart="@dimen/d_20"
+            android:layout_marginEnd="@dimen/d_56"
+            android:layout_height="0.1dp"
+            android:background="@color/grayDark"/>
+        <TableRow
+            android:layout_marginTop="@dimen/d_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/d_20"
+                android:src="@drawable/ic_vcb"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="VCB"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="0dp"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="***1*"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginEnd="@dimen/d_40"/>
+
+
+
+
+        </TableRow>
+        <View
+            android:layout_marginTop="@dimen/d_10"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@color/grayDark"/>
+
+    </LinearLayout>
+
+
     <TextView
         android:id="@+id/tv_reset_pass"
         android:layout_width="match_parent"

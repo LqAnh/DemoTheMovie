@@ -11,6 +11,8 @@ import com.example.themovie.view.fragment.M003DetailFilmFrg;
 import com.example.themovie.view.fragment.M004Frg;
 import com.example.themovie.view.fragment.M005ReviewFrg;
 import com.example.themovie.view.fragment.M007AccountFrg;
+import com.example.themovie.view.fragment.M008HistoryBookingFrg;
+import com.example.themovie.view.fragment.M009TicketCodeFrg;
 import com.example.themovie.view.viewmodel.MainViewModel;
 
 public class MainActivity extends BaseAct<MainViewModel> implements OnActionCallBack {
@@ -64,6 +66,11 @@ public class MainActivity extends BaseAct<MainViewModel> implements OnActionCall
                 m007AccountFrg.setCallBack(this);
                 showFragment(R.id.ln_main, m007AccountFrg, true);
                 break;
+            case M002MovieListFrg.KEY_SHOW_HISTORY_BOOKING:
+                M008HistoryBookingFrg m008HistoryBookingFrg = new M008HistoryBookingFrg();
+                m008HistoryBookingFrg.setCallBack(this);
+                showFragment(R.id.ln_main, m008HistoryBookingFrg, true);
+                break;
             case M003DetailFilmFrg.KEY_SHOW_TRAILER:
                 M004Frg m004Frg = new M004Frg();
                 MovieModel.Result film1 = (MovieModel.Result) data;
@@ -78,6 +85,11 @@ public class MainActivity extends BaseAct<MainViewModel> implements OnActionCall
                 m005ReviewFrg.setFilm(film2);
                 m005ReviewFrg.setCallBack(this);
                 showFragment(R.id.ln_main, m005ReviewFrg, true);
+                break;
+            case M008HistoryBookingFrg.KEY_SHOW_TICKET_CODE:
+                M009TicketCodeFrg m009TicketCodeFrg = new M009TicketCodeFrg();
+                m009TicketCodeFrg.setCallBack(this);
+                showFragment(R.id.ln_main, m009TicketCodeFrg, true);
                 break;
         }
 

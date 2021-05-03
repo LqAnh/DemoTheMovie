@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey_2"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/d_15"
+        android:paddingStart="20dp"
+        android:text="Booking History"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        tools:ignore="RtlSymmetry" />
+
+    <LinearLayout
+        android:id="@+id/ln_godzilla"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/d_45"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/d_10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/d_15"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-condensed-light"
+            android:maxLines="2"
+            android:paddingTop="@dimen/d_10"
+            android:text="10-05-2021 - 14h30"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="@dimen/d_15"
+            android:paddingStart="20dp">
+
+            <ImageView
+                android:layout_width="@dimen/d_50"
+                android:layout_height="@dimen/d_80"
+                android:src="@drawable/ic_pos" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:maxLines="2"
+                    android:text="Godzilla vs. Kong"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:maxLines="2"
+                    android:text="CGV Vincom Royal City"
+                    android:textColor="@color/black"
+                    android:textSize="17sp" />
+
+
+            </LinearLayout>
+
+
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_margin="@dimen/d_15"
+            android:background="@color/grayDark" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ln_nobody"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/d_10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/d_15"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-condensed-light"
+            android:maxLines="2"
+            android:paddingTop="@dimen/d_10"
+            android:text="12-05-2021 - 21h30"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="@dimen/d_15"
+            android:paddingStart="20dp">
+
+            <ImageView
+                android:layout_width="@dimen/d_50"
+                android:layout_height="@dimen/d_80"
+                android:src="@drawable/ic_pos1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:maxLines="2"
+                    android:text="Nobody"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:maxLines="2"
+                    android:text="CGV Vincom Bà Triệu"
+                    android:textColor="@color/black"
+                    android:textSize="17sp" />
+
+
+            </LinearLayout>
+
+
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_margin="@dimen/d_15"
+            android:background="@color/grayDark" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -19,10 +19,14 @@
             android:src="@drawable/icl_ogout"
             app:tint="@color/white" />
 
-      <View
+      <ImageView
+          android:id="@+id/iv_history"
           android:layout_width="0dp"
           android:layout_weight="2"
-          android:layout_height="wrap_content"/>
+          android:layout_height="@dimen/d_35"
+          android:src="@drawable/ic_gio_hang"
+          android:layout_gravity="center_vertical"
+          app:tint="@color/white" />
 
         <ImageView
             android:id="@+id/iv_account"
